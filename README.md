@@ -66,39 +66,32 @@
             <p class="text-gray-600 mt-2">Contenido diseñado especialmente para 3er Año</p>
         </div>
 
-        <div class="grid md:grid-grid-cols-3 gap-8">
-            <!-- Matemática -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover text-center">
-                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-calculator text-blue-600 text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Matemática</h3>
-                <p class="text-gray-600 mb-4 text-sm">Ecuaciones, funciones y geometría explicada con ejemplos de nuestra comunidad.</p>
-                <button class="text-blue-600 font-semibold hover:underline">Ver lecciones →</button>
-            </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover text-center">
+    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <i class="fas fa-calculator text-blue-600 text-2xl"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-3">Matemática</h3>
+    <p class="text-gray-600 mb-4 text-sm">Ecuaciones, funciones y geometría explicada con ejemplos de nuestra comunidad.</p>
+    <a href="#seccion-ciencias" class="text-blue-600 font-semibold hover:underline cursor-pointer">Ver lecciones ↓</a>
+</div>
 
-            <!-- Física -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover text-center">
-                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-atom text-green-600 text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Física</h3>
-                <p class="text-gray-600 mb-4 text-sm">Entiende el movimiento y la energía a través de simulaciones virtuales interactivas.</p>
-                <button class="text-green-600 font-semibold hover:underline">Explorar experimentos →</button>
-            </div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover text-center">
+    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <i class="fas fa-atom text-green-600 text-2xl"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-3">Física</h3>
+    <p class="text-gray-600 mb-4 text-sm">Entiende el movimiento y la energía a través de simulaciones virtuales interactivas.</p>
+    <a href="#seccion-ciencias" class="text-green-600 font-semibold hover:underline cursor-pointer">Explorar experimentos ↓</a>
+</div>
 
-            <!-- Química -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover text-center">
-                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-vial text-purple-600 text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Química</h3>
-                <p class="text-gray-600 mb-4 text-sm">Desde la tabla periódica hasta las reacciones químicas que vemos en el día a día.</p>
-                <button class="text-purple-600 font-semibold hover:underline">Ver reacciones →</button>
-            </div>
-        </div>
-    </section>
-
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover text-center">
+    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <i class="fas fa-vial text-purple-600 text-2xl"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-3">Química</h3>
+    <p class="text-gray-600 mb-4 text-sm">Desde la tabla periódica hasta las reacciones químicas que vemos en el día a día.</p>
+    <a href="#seccion-ciencias" class="text-purple-600 font-semibold hover:underline cursor-pointer">Ver reacciones ↓</a>
+</div>
     <!-- Interactivo: Reto Científico -->
     <section id="recursos" class="bg-blue-900 py-16 text-white px-4">
         <div class="max-w-4xl mx-auto">
