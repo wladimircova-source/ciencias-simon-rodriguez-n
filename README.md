@@ -226,7 +226,8 @@
             <input type="password" id="adminPass" placeholder="Clave de acceso" class="w-full p-4 bg-slate-100 rounded-2xl mb-6 border-2 border-transparent focus:border-blue-500 outline-none">
             <button onclick="login()" class="w-full bg-blue-600 text-white py-4 rounded-2xl font-bold shadow-lg hover:bg-blue-700 mb-4">Entrar</button>
             <button onclick="toggleAdminLogin()" class="w-full text-slate-400 text-xs font-bold uppercase">Cerrar</button>
-        </div><div class="mt-12 flex flex-col items-center bg-slate-50 p-8 rounded-[3rem] max-w-xs mx-auto border border-slate-100 shadow-inner">
+        </div>
+        <div class="mt-12 flex flex-col items-center bg-slate-50 p-8 rounded-[3rem] max-w-xs mx-auto border border-slate-100 shadow-inner">
     <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4 text-center">
         Escanea para compartir el blog
     </p>
