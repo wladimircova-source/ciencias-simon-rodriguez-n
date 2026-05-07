@@ -65,11 +65,11 @@
 
                 <div class="grid grid-cols-2 gap-4">
                     <div class="space-y-4">
-                        <img src="image_dd5e1a.jpg" alt="Patio Liceo" class="rounded-2xl shadow-md hover:scale-105 transition duration-300">
+                        <img src="WhatsApp Image 2026-05-06 at 1.48.28 PM.jpeg" alt="Patio Liceo" class="rounded-2xl shadow-md hover:scale-105 transition duration-300">
                         <div class="bg-blue-100 p-3 rounded-xl text-[10px] font-bold text-blue-700 text-center uppercase">Áreas Comunes</div>
                     </div>
                     <div class="pt-8 space-y-4">
-                        <img src="image_dd5ddf.jpg" alt="Estudiantes Liceo" class="rounded-2xl shadow-md hover:scale-105 transition duration-300">
+                     <img src="WhatsApp Image 2026-05-06 at 1.48.29 PM.jpeg" alt="Estudiantes Liceo" class="rounded-2xl shadow-md hover:scale-105 transition duration-300">
                         <div class="bg-green-100 p-3 rounded-xl text-[10px] font-bold text-green-700 text-center uppercase">Espacios de Estudio</div>
                     </div>
                 </div>
