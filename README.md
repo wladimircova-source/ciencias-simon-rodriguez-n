@@ -40,7 +40,42 @@
     </header>
 
     <main class="max-w-7xl mx-auto px-4 py-12">
-        
+
+        <section id="historia" class="mb-16 bg-white p-8 rounded-[2rem] card-shadow border border-orange-100">
+            <div class="flex items-center mb-8">
+                <div class="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center mr-4 shadow-lg">
+                    <i class="fas fa-landmark text-xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-800">Nuestra Identidad: Aricagua y su Historia</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="space-y-4 text-sm leading-relaxed text-slate-600">
+                    <p>
+                        <strong class="text-orange-600">Aricagua</strong>, cuyo nombre indígena significa <span class="italic">"Ricas Aguas"</span>, es una comunidad con raíces profundas en el Municipio Montes. Fundada como pueblo de misión en 1692, destaca por su histórica iglesia dedicada a la <strong>Soledad de María</strong>, cuya festividad celebramos cada 26 de diciembre.
+                    </p>
+                    <p>
+                        Nuestra economía es el reflejo del esfuerzo de nuestra gente: desde los tradicionales conucos de maíz y verduras, hasta la gran producción de <strong>caña de azúcar</strong> y papelón en trapiches emblemáticos como el de "El Negro Vega".
+                    </p>
+                    <div class="bg-orange-50 p-4 rounded-xl border-l-4 border-orange-500">
+                        <p class="font-bold text-orange-800 mb-1">Cultura y Sabores:</p>
+                        <p>Desde la sopa de mondongo y arepas piladas, hasta el joropo y la burriquita. Honramos a personajes como <strong>José Julián Villafranca</strong>, nuestro Patrimonio Cultural Viviente.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="image_dd5e1a.jpg" alt="Patio Liceo" class="rounded-2xl shadow-md hover:scale-105 transition duration-300">
+                        <div class="bg-blue-100 p-3 rounded-xl text-[10px] font-bold text-blue-700 text-center uppercase">Áreas Comunes</div>
+                    </div>
+                    <div class="pt-8 space-y-4">
+                        <img src="image_dd5ddf.jpg" alt="Estudiantes Liceo" class="rounded-2xl shadow-md hover:scale-105 transition duration-300">
+                        <div class="bg-green-100 p-3 rounded-xl text-[10px] font-bold text-green-700 text-center uppercase">Espacios de Estudio</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="matematica" class="mb-16 bg-white p-8 rounded-[2rem] card-shadow border border-blue-100">
             <div class="flex items-center mb-8">
                 <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center mr-4 shadow-lg">
@@ -195,75 +230,4 @@
     </div>
 
     <footer class="bg-white border-t py-16 text-center">
-        <p class="text-2xl font-black text-slate-800">Cova W. & Hernández Y.</p>
-        <p class="text-blue-600 font-bold text-sm mb-4">TÉCNICO EN SISTEMAS - PROYECTO DE GRADO</p>
-        <p class="text-slate-400 text-[10px] uppercase tracking-widest">Aricagua, Estado Bolívar • 2026</p>
-    </footer>
-
-    <script>
-        let resources = JSON.parse(localStorage.getItem('aricagua_data')) || [];
-        let isAdmin = false;
-        const PASS = "aricagua2024";
-
-        function switchTab(os) {
-            const btnC = document.getElementById('btn-canaima');
-            const btnW = document.getElementById('btn-windows');
-            if(os === 'canaima') {
-                btnC.className = "px-8 py-3 rounded-xl font-bold transition bg-white text-blue-700 shadow-lg";
-                btnW.className = "px-8 py-3 rounded-xl font-bold transition text-white opacity-70";
-            } else {
-                btnW.className = "px-8 py-3 rounded-xl font-bold transition bg-white text-blue-700 shadow-lg";
-                btnC.className = "px-8 py-3 rounded-xl font-bold transition text-white opacity-70";
-            }
-        }
-
-        document.getElementById('submissionForm').onsubmit = (e) => {
-            e.preventDefault();
-            const res = { id: Date.now(), name: document.getElementById('progName').value, link: document.getElementById('progLink').value, status: 'Pendiente' };
-            resources.unshift(res);
-            save();
-            e.target.reset();
-        };
-
-        function save() {
-            localStorage.setItem('aricagua_data', JSON.stringify(resources));
-            render();
-        }
-
-        function render() {
-            const container = document.getElementById('resourceContainer');
-            container.innerHTML = resources.length ? '' : '<p class="text-slate-500 text-center col-span-2">No hay enlaces compartidos.</p>';
-            resources.forEach(r => {
-                const div = document.createElement('div');
-                div.className = "bg-slate-800/50 p-5 rounded-2xl flex justify-between items-center border border-slate-700/50";
-                div.innerHTML = `
-                    <div class="overflow-hidden">
-                        <p class="font-bold text-blue-400 truncate text-sm">${r.name}</p>
-                        <a href="${r.link}" target="_blank" class="text-[9px] text-slate-500 hover:text-white">Click para abrir link</a>
-                    </div>
-                    <div class="flex gap-2">
-                        <span class="text-[8px] px-2 py-1 rounded-full font-bold ${r.status === 'Verificado' ? 'bg-green-500/20 text-green-400' : 'bg-orange-500/20 text-orange-400'}">${r.status}</span>
-                        ${isAdmin ? `<button onclick="approve(${r.id})" class="text-green-400 text-xs"><i class="fas fa-check"></i></button>
-                                     <button onclick="del(${r.id})" class="text-red-400 text-xs"><i class="fas fa-trash"></i></button>` : ''}
-                    </div>
-                `;
-                container.appendChild(div);
-            });
-        }
-
-        function toggleAdminLogin() { document.getElementById('loginModal').classList.toggle('hidden'); }
-        function login() {
-            if(document.getElementById('adminPass').value === PASS) {
-                isAdmin = true;
-                document.getElementById('adminBadge').classList.remove('hidden');
-                toggleAdminLogin();
-                render();
-            } else { alert("Clave incorrecta"); }
-        }
-        function approve(id) { resources = resources.map(r => r.id === id ? {...r, status: 'Verificado'} : r); save(); }
-        function del(id) { if(confirm("¿Eliminar?")) { resources = resources.filter(r => r.id !== id); save(); } }
-
-        render();
-    </script>
-</body>
-</html>
+        <p class="text-2xl font-black text-slate-
