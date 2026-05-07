@@ -229,5 +229,5 @@
     </div>
 </div>
 
-<footer class="bg-white border-t py-16 text-center">
-    <p class="text-2xl font-black text-slate-
+
+
